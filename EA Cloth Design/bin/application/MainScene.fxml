@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="bganchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="824.0" prefWidth="899.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <VBox prefHeight="820.0" prefWidth="194.0" styleClass="Vbox" stylesheets="@application.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="149.0" prefWidth="280.0" styleClass="logobox">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                     <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="1.77" specularExponent="14.48" surfaceScale="2.88">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="buttons" mnemonicParsing="false" onAction="#LoadManSub" prefHeight="25.0" prefWidth="299.0" styleClass="button1" stylesheets="@application.css" text="MAN" textAlignment="CENTER" textFill="#f8f5f2">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="buttons1" mnemonicParsing="false" onAction="#LoadWomanSub" prefHeight="25.0" prefWidth="299.0" styleClass="button1" stylesheets="@application.css" text="WOMAN" textAlignment="CENTER" textFill="#f8f5f2">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="buttons2" mnemonicParsing="false" onAction="#LoadAllSub" prefHeight="25.0" prefWidth="294.0" styleClass="button1" stylesheets="@application.css" text="ALL" textAlignment="CENTER" textFill="#f8f5f2">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <StackPane prefHeight="429.0" prefWidth="280.0">
+               <children>
+                  <VBox fx:id="mansub" prefHeight="429.0" prefWidth="280.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#optionsEnabledShirt" prefHeight="25.0" prefWidth="299.0" styleClass="button2" stylesheets="@application.css" text="T-SHIRTS" textAlignment="CENTER" textFill="#f8f5f2">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#optionsEnabledTrousers" prefHeight="25.0" prefWidth="299.0" styleClass="button2" stylesheets="@application.css" text="TROUSERS" textAlignment="CENTER" textFill="#f8f5f2">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="womansub" layoutX="10.0" layoutY="10.0" prefHeight="429.0" prefWidth="280.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#optionsEnabledShirt" prefHeight="25.0" prefWidth="299.0" styleClass="button2" stylesheets="@application.css" text="T-SHIRTS" textAlignment="CENTER" textFill="#f8f5f2">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#optionsEnabledTrousers" prefHeight="25.0" prefWidth="299.0" styleClass="button2" stylesheets="@application.css" text="TROUSERS" textAlignment="CENTER" textFill="#f8f5f2">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="all" layoutX="10.0" layoutY="10.0" prefHeight="429.0" prefWidth="280.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#optionsEnabledShirt" prefHeight="25.0" prefWidth="299.0" styleClass="button2" stylesheets="@application.css" text="T-SHIRTS" textAlignment="CENTER" textFill="#f8f5f2">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#optionsEnabledTrousers" prefHeight="25.0" prefWidth="299.0" styleClass="button2" stylesheets="@application.css" text="TROUSERS" textAlignment="CENTER" textFill="#f8f5f2">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <SplitPane dividerPositions="0.5" layoutX="200.0" layoutY="992.0" opacity="0.75" prefHeight="29.0" prefWidth="1722.0">
+         <items>
+            <HBox prefHeight="27.0" prefWidth="580.0">
+               <children>
+                  <Label fx:id="help" prefHeight="27.0" prefWidth="841.0" text="Population Board: Deactivated">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="439.0">
+               <children>
+                  <ProgressBar fx:id="pb" prefHeight="18.0" prefWidth="415.0" progress="0.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+               </children>
+            </HBox>
+         </items>
+      </SplitPane>
+      <TabPane fx:id="tabM" layoutX="200.0" prefHeight="991.0" prefWidth="1722.0" side="RIGHT" stylesheets="@application.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="generation" closable="false" disable="true" text="GENERATION">
+               <content>
+                  <Pane prefHeight="877.0" prefWidth="939.0">
+                     <children>
+                        <FlowPane fx:id="atome" prefHeight="666.0" prefWidth="1650.0" styleClass="population-window" stylesheets="@application.css" />
+                        <HBox layoutY="648.0" prefHeight="338.0" prefWidth="1633.0" styleClass="VboxPop">
+                           <children>
+                              <VBox prefHeight="301.0" prefWidth="1633.0">
+                                 <children>
+                                    <Pane prefHeight="80.0" prefWidth="1646.0">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="15.0" prefWidth="250.0" text="Select &quot;NEW GENERATION&quot; after evaluation">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="newGen" alignment="CENTER" layoutX="330.0" layoutY="23.0" mnemonicParsing="false" onAction="#loadNewPopulation" styleClass="button3" text="NEW GENERATION" />
+                                          <Label alignment="CENTER" layoutX="530.0" layoutY="30.0" prefHeight="15.0" prefWidth="300.0" text="Select &quot;FINAL GENERATION&quot; if you find what you need">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="finalGen" alignment="CENTER" layoutX="880.0" layoutY="23.0" mnemonicParsing="false" onAction="#finalGen" styleClass="button3" text="FINAL GENERATION" />
+                                          <Label alignment="CENTER" contentDisplay="TOP" layoutX="1080.0" layoutY="30.0" prefHeight="15.0" prefWidth="300.0" text="Select &quot;RESET&quot; to reset the designs">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="resetB" alignment="CENTER" layoutX="1420.0" layoutY="23.0" mnemonicParsing="false" onAction="#resetGen" styleClass="resetbutton" text="RESET" />
+                                       </children>
+                                    </Pane>
+                                    <ScrollPane fx:id="sp" prefHeight="238.0" prefWidth="1633.0" styleClass="ScrollStats" visible="false">
+                                       <content>
+                                          <VBox fx:id="StatsPane" prefHeight="264.0" prefWidth="1640.0" visible="false">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="1640.0" styleClass="VboxStats">
+                                                   <children>
+                                                      <Label prefHeight="90.0" prefWidth="120.0" text="CROMOSOMES :">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="chromosomes" layoutX="25.0" layoutY="10.0" prefHeight="90.0" prefWidth="1499.0">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="VboxStats">
+                                                   <children>
+                                                      <Label fx:id="selcetedcloth" prefHeight="90.0" prefWidth="200.0" text="SELECTED CLOTHING :">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="gennum" prefHeight="90.0" prefWidth="200.0" text="GENERATION NUM : 1">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="fitavg" prefHeight="90.0" prefWidth="200.0" text="FITNESS AVG :">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                    <Pane prefHeight="28.0" prefWidth="1633.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1322.0" layoutY="6.0" prefHeight="15.0" prefWidth="257.0" text="press the button to min/max the stats panel">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="1579.0" layoutY="3.0" minHeight="18.0" minWidth="28.0" mnemonicParsing="false" onAction="#minmaxStatsPane" prefHeight="22.0" prefWidth="28.0" styleClass="button4">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/icons8-maximize-window-24.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab fx:id="options" closable="false" onSelectionChanged="#fillgenn" text="OPTIONS">
+               <content>
+                  <Pane prefHeight="802.0" prefWidth="999.0">
+                     <children>
+                        <ImageView fitHeight="977.0" fitWidth="1238.0" layoutX="268.0" opacity="0.04" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo1.png" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="2.0" specularConstant="1.77" specularExponent="14.48" surfaceScale="2.88">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <Label layoutX="30.0" layoutY="20.0" prefHeight="27.0" prefWidth="176.0" styleClass="OptionTabsLabels" text="Generation Options">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="30.0" layoutY="50.0" prefHeight="150.0" prefWidth="415.0" styleClass="OptionsTabs">
+                           <children>
+                              <FlowPane prefHeight="50.0" prefWidth="400.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="302.0" text="Number of designs per generation : ">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="gennumber" prefHeight="26.0" prefWidth="25.0" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="300.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="303.0" text="Number of maximum generations : ">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="maxgens" prefHeight="26.0" prefWidth="0.0" />
+                                 </children>
+                              </FlowPane>
+                           </children>
+                        </VBox>
+                        <Label layoutX="30.0" layoutY="220.0" prefHeight="27.0" prefWidth="275.0" styleClass="OptionTabsLabels" text="Filters">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="30.0" layoutY="250.0" prefHeight="327.0" prefWidth="832.0">
+                           <children>
+                              <VBox fx:id="filter1" disable="true" prefHeight="200.0" prefWidth="418.0" styleClass="OptionsTabs">
+                                 <children>
+                                    <FlowPane layoutX="35.0" layoutY="35.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="368.0" text="T-Shirt">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Color : ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="colorpal" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="25.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Type of sleeves :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="sleevesheight" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="81.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Length :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="shirtsheight" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="135.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Pockets :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="pocketsch" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="212.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Collar :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="poloneck" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="filter2" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="418.0" styleClass="OptionsTabs">
+                                 <children>
+                                    <FlowPane layoutX="35.0" layoutY="35.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="368.0" text="Trousers">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Color : ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="colorpalT" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="25.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Pants type :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="panttype" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="81.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Crotch type :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="crotch" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="135.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Pockets :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="pocketschT" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Legs width :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="pantslowerpart" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="100.0" layoutY="220.0" prefHeight="30.0" prefWidth="739.0" text="Chooce the filters you like but be aware that the more you chooce will restrict the outcome of the first designs.">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="210.0" layoutY="20.0" prefHeight="30.0" prefWidth="739.0" text="Navigate to HELP through the tab menu at your right for any questions you may have.">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="generateB" alignment="CENTER" disable="true" graphicTextGap="0.0" layoutX="1393.0" layoutY="767.0" mnemonicParsing="false" onAction="#loadPopulation" prefWidth="200.0" styleClass="button5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="189.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/generate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="30.0" layoutY="590.0" prefHeight="27.0" prefWidth="60.0" styleClass="OptionTabsLabels" text="Trends">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="30.0" layoutY="620.0" prefHeight="327.0" prefWidth="832.0">
+                           <children>
+                              <VBox fx:id="trend1" prefHeight="200.0" prefWidth="418.0" styleClass="OptionsTabs">
+                                 <children>
+                                    <FlowPane layoutX="35.0" layoutY="35.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="368.0" text="T-Shirt">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Color : ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="colorpal1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="25.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Type of sleeves :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="sleevesheight1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="81.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Length :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="shirtsheight1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="135.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Pockets :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="pocketsch1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="212.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Collar :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="poloneck1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="trend2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="418.0" styleClass="OptionsTabs">
+                                 <children>
+                                    <FlowPane layoutX="35.0" layoutY="35.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="368.0" text="Trousers">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Color : ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="colorpalT1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="25.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Pants type :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="panttype1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="81.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Crotch type :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="crotch1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="35.0" layoutY="135.0" prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Pockets :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="pocketschT1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane prefHeight="50.0" prefWidth="400.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="250.0" text="Legs width :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="pantslowerpart1" prefHeight="26.0" prefWidth="100.0" />
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="110.0" layoutY="590.0" prefHeight="30.0" prefWidth="739.0" text="Trends will affect the designs after the first generation">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" layoutX="902.0" layoutY="47.0" prefHeight="327.0" prefWidth="703.0" styleClass="RecentImagesP">
+                           <children>
+                              <VBox fx:id="recentimages" prefHeight="150.0" prefWidth="415.0" />
+                           </children></HBox>
+                        <Label layoutX="902.0" layoutY="22.0" prefHeight="27.0" prefWidth="213.0" styleClass="OptionTabsLabels" text="Recent Final Generations">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                     </padding>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="HELP">
+               <content>
+                  <Pane prefHeight="802.0" prefWidth="999.0">
+                     <children>
+                        <Text layoutX="25.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcom to Cloth Design auto clothing generator app!!" wrappingWidth="965.90234375">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="25.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In the OPTIONS tab you will find the Generation Options and the Filters. Generation Options has to choices:" wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="35.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• The &quot;Number of designs per generation&quot; defines the cells of designs that will be created per generation. This option has a default number of 10 which is the max number. It comes at a range of 2 to 10 ( the more cells you select comes with more variety)." wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="35.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• The &quot;Number of maximum generations&quot; defines the number of generations that will be create through one session. This option practicle exists, because after a number of generations the designs will be resitricted and probably repeat themselves. This option comes with a default number of 10 and has a range of 6 to 30. " wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="25.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Filters are locked/disabled before you select the piece of cloth you want to be created. Navigate through the red menu at your left. Select a piece and then the right filter panel will be enabled.  Each individual piece of cloth comes with its own filters. The only common filter is the &quot;color&quot;. Every filters has a default value of &quot;ANY&quot;, to let the designs be random. Each choice you make will restrict the designs, and make them look alike but not the same. Whenever you are ready push the GENERATE button. You will be tranfered to GENERATION tab where the firt generation will be initialized." wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="25.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The GENERATION tab consists of three parts:" wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="25.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WORK IN PROGRESS" wrappingWidth="1130.90234375">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="35.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• A panel of cells where you can observe the designs or the generation. In this certain cells of each design there is a yellow choice box &quot;evaluation box&quot;, in which you will evaluate each design with a number of 0 to 10 (two designs have to be rated above 0)." wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="35.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• A control panel which give you three buttons. The button of &quot;NEW GENERATION&quot; which will generate the next generation after the evaluation of each individual design. The &quot;FINAL GENERATION&quot; button which will deactivate it and &quot;NEW GENERATION&quot; and will save the designs. The &quot;RESET&quot; button wich will reset the whole GENERATION tab and will tranfer you back to OPTIONS." wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="35.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Last is a stats panel. its hidden and it can only be activated throught the max button in the bottom right corner. The stats panel shows inforamtion for each design ( It exists for scientific reasons )." wrappingWidth="1200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="977.0" fitWidth="1238.0" layoutX="268.0" opacity="0.04" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo1.png" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="2.0" specularConstant="1.77" specularExponent="14.48" surfaceScale="2.88">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                     </padding>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane fx:id="notev" layoutX="225.0" layoutY="497.0" prefHeight="173.0" prefWidth="340.0" styleClass="Popup" visible="false">
+         <children>
+            <Text fx:id="notevp" layoutX="11.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLEASE RATE THE DESIGNS" textAlignment="CENTER" wrappingWidth="312.0" AnchorPane.topAnchor="49.576171875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="137.0" fitWidth="144.0" layoutX="99.0" layoutY="9.0" opacity="0.04" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo1.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="1.77" specularExponent="14.48" surfaceScale="2.88">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <Button alignment="CENTER" layoutX="137.0" layoutY="100.0" mnemonicParsing="false" onAction="#closePopEv" prefHeight="22.0" prefWidth="170.0" styleClass="PopupB" stylesheets="@application.css" text="OK" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Reflection />
+         </effect>
+      </AnchorPane>
+      <Pane fx:id="pantsbackside" prefHeight="302.0" prefWidth="304.0" styleClass="atome1" visible="false" />
+   </children>
+</AnchorPane>

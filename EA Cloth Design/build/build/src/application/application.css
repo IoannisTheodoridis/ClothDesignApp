@@ -1,0 +1,363 @@
+﻿/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.bg{
+
+	-fx-background-color :  #D70026;
+	
+}
+
+//general bg color
+.background {
+
+    -fx-background-color: #F8F5F2;
+    -fx-pref-height : 1025px;
+    -fx-pref-width : 1920px;
+    
+}
+
+//buttons
+
+//general buttons
+.button {
+
+	-fx-background-color :  #EDB83D;
+	-fx-pref-width : 220px;
+	-fx-padding: 0 0 0 0;
+	-fx-margin: 0 0 0 0;
+	
+}
+
+//buttons "MAN", "WOMAN", "ALL"
+.button1 {
+
+	-fx-background-color :  #D70026;
+	-fx-pref-width : 220px;
+	-fx-pref-height : 60px;
+	-fx-padding: 0 0 0 0;
+	-fx-margin: 0 0 0 0;
+	
+}
+
+//buttons "MAN", "WOMAN", "ALL" hover
+.button1:hover {
+
+	-fx-background-color :  #ac001e;
+	
+}
+
+//hidden buttons "SHIRTS", "TROUSERS"
+.button2 {
+
+	-fx-background-color :  #ac001e;
+	-fx-text-fill: #F8F5F2;
+	-fx-pref-width : 220px;
+	-fx-pref-height : 40px;
+	-fx-padding: 0 0 0 0;
+	-fx-margin: 0 0 0 0;
+	
+}
+
+//hidden buttons "SHIRTS", "TROUSERS" hover
+.button2:hover {
+
+	-fx-background-color :  #F8F5F2;
+	-fx-text-fill: #ac001e;
+	
+}
+
+//hidden buttons "SHIRTS", "TROUSERS" also GENERATION tab buttons "NEW GENERATION", "FINAL GENERATION"
+.button3{
+
+	-fx-pref-width : 150px;
+	-fx-pref-height : 25px;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6, 0, 0, 0);
+	-fx-background-color :  #000B29;
+	-fx-text-fill: #F8F5F2;
+	
+}
+
+//hidden buttons "SHIRTS", "TROUSERS" also GENERATION tab buttons "NEW GENERATION", "FINAL GENERATION" hover
+.button3:hover{
+ 
+	-fx-background-color :  #EDB83D;
+	
+}
+
+//button "min/max" in GENERATION tab low right of Stats panel 
+.button4 {
+
+	-fx-background-color : transparent;
+	-fx-pref-width : 5px;
+	-fx-pref-height : 5px;
+	
+}
+
+//button "GENERATE" in OPTIONS tab
+.button5{
+
+	-fx-pref-width : 180px;
+	-fx-pref-height : 180px;
+	-fx-background-radius: 120 120 120 120;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,11,41,0.5), 6, 0, 10, 0);
+	-fx-text-fill: #F8F5F2;
+	-fx-background-color: #D70026;
+	-fx-padding: 0 0 0 0;
+	-fx-margin: 0 0 0 0;
+	
+}
+
+//button "GENERATE" in OPTIONS tab hover
+.button5:hover{ 
+	
+	-fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+    
+}
+
+//button "RESET" in GENERATION tab
+.resetbutton {
+
+	-fx-pref-width : 150px;
+	-fx-pref-height : 25px;
+	-fx-background-radius: 5 5 5 5;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6, 0, 0, 0);
+	-fx-background-color :  #D70026;
+	-fx-text-fill: #F8F5F2;
+	
+}
+
+//button "RESET" in GENERATION tab hover
+.resetbutton:hover{ 
+
+	-fx-background-color :  #EDB83D;
+	
+}
+
+//general Vbox css
+.Vbox {
+
+	-fx-background-color :  #D70026;
+	-fx-pref-height : 1020px;
+	-fx-pref-width : 200px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+	
+}
+
+//general ccs for GENERATION tab cells or designs(panes)
+.atome {
+
+	-fx-background-color : #F8F5F2;
+	-fx-pref-width : 330px;
+	-fx-pref-height : 330px;
+	-fx-border-color: #000B29;
+    -fx-border-width: 0 0.5 0.5 0; 
+    -fx-padding: 15px;
+    -fx-opacity: 0.9;
+    
+}
+
+//general ccs for GENERATION tab cells or designs(panes) hidden pants back side
+.atome1 {
+
+	-fx-background-color : #F8F5F2;
+	-fx-pref-width : 330px;
+	-fx-pref-height : 330px;
+    -fx-padding: 15px;
+    
+}
+
+//general ccs for GENERATION tab cells or designs(panes) hover
+.atome:hover {
+
+	-fx-opacity: 1;
+	
+}
+
+//general ccs for GENERATION tab
+.population-window{
+
+	-fx-background-color : #F8F5F2;
+	-fx-opacity: 0.8;
+	
+}
+
+//general ccs for GENERATION tab cells choice boxes 
+.rating {
+
+	-fx-background-color : #EDB83D;
+	-fx-text-inner-color: #000B29;
+	-fx-mark-color:#000B29;
+	-fx-font-family: Sans-Serif;
+ 	-fx-opacity: 0.5;
+ 	-fx-pref-width: 35px;
+ 	-fx-pref-height: 26px;
+	
+}
+
+//general ccs for GENERATION tab cells choice boxes hover
+.rating:hover {
+
+	-fx-opacity: 1;
+	
+}
+
+//dropdown choice boxes for GENERATION tab cells choice boxes
+.rating .context-menu {
+
+	-fx-background-color : #EDB83D;
+ 	-fx-background-radius: 10 10 10 10;
+ 	-fx-font-family: Sans-Serif;
+	-fx-opacity: 0.5;
+	 
+}
+
+//dropdown choice boxes for GENERATION tab cells choice boxes
+.rating .context-menu:hover {
+   	
+   	-fx-opacity: 1;
+   	
+}
+
+//general css for tab menu
+.tab .tab-label {
+  
+  	-fx-background-color: transparent;
+  	-fx-text-fill: #D70026;
+  	-fx-text-alignment: center;
+  	 
+}
+
+//general css for tab menu  
+.tab {
+
+  	-fx-background-color: transparent;
+  	-fx-background-insets: 0.0;
+  	-fx-background-radius: 0.0;
+  	-fx-padding: 0 30 0 30;
+  	-fx-pref-height: 79px;
+  	
+}
+
+//general css for tab menu  
+.tab:selected {
+
+  	-fx-background-color: transparent;
+  	-fx-background-radius: 0;
+  	-fx-background-insets: 0;
+  	-fx-border-width: 0 0 5 0;
+  	-fx-border-color: #D70026
+  	
+}
+
+//general css for tab menu  
+.tab:focused {
+
+  	-fx-focus-color: transparent;
+
+}
+
+//general css for tab menu  
+.tab-pane *.tab-header-background{
+
+  -fx-background-color:  #dddddd;
+  	
+}
+
+//general css for tab menu 
+.tab-pane:right *.tab-header-area{
+ 	
+ 	-fx-background-insets: 0, 0 0 10;
+ 	-fx-padding: 0.0em 0.0em 0.0em 0.0em;
+ 	
+}
+
+//general css for tab menu 
+.tab:selected .focus-indicator{
+
+	-fx-focus-color: transparent;
+ 	-fx-border-color: transparent;
+ 	
+}
+
+//the Hbox that contains the Stats panel in GENERATION tab 
+.VboxPop {
+ 	
+ 	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+ 	-fx-background-color : #dddddd;
+}
+
+//the Hboxes that contains the hidden Scroll Stats Panel 
+.VboxStats {
+
+ 	-fx-padding: 0 0 0 15;
+ 	-fx-pref-height: 80px;
+}
+
+//hidden Pop up anchor
+.Popup{
+ 
+ 	-fx-background-color: #FFFFFF;
+ 	-fx-opacity: 1;
+ 	-fx-pref-width: 333px;
+ 	-fx-pref-height: 150px;
+ 	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+
+}
+
+// hidden Pop up anchor's button
+.PopupB{
+ 
+ 	-fx-pref-width: 60px;
+ 	-fx-pref-height: 30px;
+ 	-fx-background-color: #D70026;
+ 	-fx-text-fill: #FFFFFF;
+ 	
+}
+
+//Vboxes in OPTIONS tab contain the options and filters 
+.OptionsTabs {
+ 	
+ 	-fx-background-color: #FFFFFF;
+ 	-fx-padding: 25 25 25 25;
+ 	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+ 	
+}
+
+//Labels of Vboxes in OPTIONS tab contain the options and filters  
+.OptionTabsLabels {
+ 	
+ 	-fx-text-fill: #D70026;
+ 	
+}
+
+//Recent Images Panel
+.RecentImagesP{
+	
+	-fx-background-color: #FFFFFF;
+ 	-fx-opacity: 1;
+ 	-fx-pref-width: 333px;
+ 	-fx-pref-height: 150px;
+ 	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+ 	-fx-padding: 25 25 25 25;
+ 	
+}
+
+//Recent Images
+.RecentImagesI{
+	
+	-fx-padding: 25 25 25 25;
+	-fx-margin: 25 25 25 25;
+	
+}
+
+//Recent Images hover
+.RecentImagesI:hover{ 
+	
+	-fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+    
+}
+  
